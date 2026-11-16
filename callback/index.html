@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><meta charset="utf-8"><title>Bureauklok - Tesla koppelen</title></head>
+<body style="font-family:sans-serif;background:#0a1628;color:#e6edf7;padding:40px">
+<p id="m">Bezig met doorsturen naar de Bureauklok op de NAS...</p>
+<script>
+var q = location.search;
+if (q.indexOf("code=") >= 0) { location.replace("http://192.168.5.250/tesla.php" + q); }
+else { document.getElementById("m").textContent = "Geen code van Tesla ontvangen."; }
+</script>
+</body>
+</html>
